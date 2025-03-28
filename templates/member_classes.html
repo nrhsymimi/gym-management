@@ -1,0 +1,41 @@
+<!-- templates/member_classes.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ member[1] | e }}'s Classes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Classes for {{ member[1] | e }}</h1>
+
+        {% if classes %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Class Name</th>
+                    <th>Class Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for class_item in classes %}
+                <tr>
+                    <td>{{ class_item[0] | e }}</td>
+                    <td>{{ class_item[1] | e }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No classes registered for this member.</p>
+        {% endif %}
+
+        <div class="navigation">
+            <a href="{{ url_for('view_members') }}">← Back to Members List</a>
+            <a href="{{ url_for('register_class', member_id=member[0]) }}">+ Register New Class for {{ member[1] | e }}</a>
+        </div>
+    </div>
+</body>
+</html>

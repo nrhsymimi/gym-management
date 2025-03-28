@@ -1,0 +1,153 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dfe1e3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #343a40;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 0;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.view {
+    background-color: #007bff;
+}
+
+.btn.view:hover {
+    background-color: #0056b3;
+}
+
+.btn.register {
+    background-color: #17a2b8;
+}
+
+.btn.register:hover {
+    background-color: #117a8b;
+}
+
+.btn.back {
+    background-color: #6c757d;
+}
+
+.btn.back:hover {
+    background-color: #5a6268;
+}PP
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.actions a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.actions a.view {
+    background-color: #17a2b8;
+}
+
+.actions a.view:hover {
+    background-color: #117a8b;
+}
+
+.actions a.register {
+    background-color: #28a745;
+}
+
+.actions a.register:hover {
+    background-color: #1e7e34;
+}
+
+.navigation {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navigation a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #ffc107;
+    color: #212529;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #e0a800;
+}

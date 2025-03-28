@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}</h1>
+        <h2>Dashboard</h2>
+        <div class="navigation">
+            <a href="{{ url_for('add_member') }}">+ Add Member</a>
+            <a href="{{ url_for('view_members') }}">View Members</a>
+            <a href="{{ url_for('add_class') }}">+ Add Class</a>
+            <a href="{{ url_for('view_classes') }}">View Classes</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

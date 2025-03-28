@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Classes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Classes List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for class_item in classes %}
+                <tr>
+                    <td>{{ class_item[0] }}</td>
+                    <td>{{ class_item[1] }}</td>
+                    <td>{{ class_item[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation">
+            <a href="{{ url_for('dashboard') }}" class="btn back">← Back</a>
+        </div>
+    </div>
+</body>
+</html>

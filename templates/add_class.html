@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Class - Gym Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=3">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Class</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <label for="class_name">Class Name</label>
+            {{ form.class_name() }}
+            
+            <label for="instructor">Instructor</label>
+            {{ form.instructor() }}
+            
+            <label for="class_time">Schedule</label>
+           {{ form.class_time() }}
+
+            
+            {{ form.submit(class="btn register") }}
+        </form>
+
+        <div class="navigation">
+            <a href="{{ url_for('dashboard') }}" class="btn back">← Back</a>
+        </div>
+    </div>
+</body>
+</html>
